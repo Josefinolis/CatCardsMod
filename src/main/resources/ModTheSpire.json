@@ -1,0 +1,10 @@
+{
+    "modid": "CatCardsMod",
+    "name": "Cat Cards - Culo Gordo & Buggy",
+    "author_list": ["os_uis"],
+    "description": "Adds two cat-themed colorless cards: Peso Muerto (Culo Gordo) and Depredador Diurno (Buggy).",
+    "version": "1.0.0",
+    "sts_version": "12-22-2020",
+    "mts_version": "3.23.0",
+    "dependencies": ["basemod"]
+}
