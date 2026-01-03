@@ -19,7 +19,7 @@ public class CatCardsMod implements EditCardsSubscriber, EditStringsSubscriber, 
 
     public static final Logger logger = LogManager.getLogger(CatCardsMod.class.getName());
     public static final String MOD_ID = "CatCardsMod";
-    private static final String VERSION = "1.0.0";
+    private static final String VERSION = "1.1.0";
 
     // Paths
     public static final String CARD_IMAGES_PATH = "catcards/images/cards/";
