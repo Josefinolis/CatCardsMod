@@ -6,8 +6,9 @@ import basemod.interfaces.EditStringsSubscriber;
 import basemod.interfaces.PostInitializeSubscriber;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.localization.CardStrings;
+import com.megacrit.cardcrawl.localization.PowerStrings;
 
-import catcards.cards.PesoMuerto;
+import catcards.cards.CuloGordo;
 import catcards.cards.DepredadorDiurno;
 
 import org.apache.logging.log4j.LogManager;
@@ -35,14 +36,14 @@ public class CatCardsMod implements EditCardsSubscriber, EditStringsSubscriber, 
     @Override
     public void receivePostInitialize() {
         logger.info("Cat Cards Mod - Post Initialize");
-        logger.info("Cartas de gatos cargadas: Peso Muerto (Culo Gordo) y Depredador Diurno (Buggy)");
+        logger.info("Cartas de gatos cargadas: Culo Gordo y Depredador Diurno (Buggy)");
     }
 
     @Override
     public void receiveEditCards() {
         logger.info("Registrando cartas de gatos...");
 
-        BaseMod.addCard(new PesoMuerto());
+        BaseMod.addCard(new CuloGordo());
         BaseMod.addCard(new DepredadorDiurno());
 
         logger.info("Cartas registradas correctamente");
@@ -52,6 +53,8 @@ public class CatCardsMod implements EditCardsSubscriber, EditStringsSubscriber, 
     public void receiveEditStrings() {
         BaseMod.loadCustomStringsFile(CardStrings.class,
                 "catcards/localization/CardStrings.json");
+        BaseMod.loadCustomStringsFile(PowerStrings.class,
+                "catcards/localization/PowerStrings.json");
     }
 
     public static String makeCardPath(String resourcePath) {

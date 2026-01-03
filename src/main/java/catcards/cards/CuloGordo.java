@@ -8,54 +8,52 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.MetallicizePower;
 
 import catcards.CatCardsMod;
-import catcards.powers.DepredadorDiurnoPower;
 
-public class DepredadorDiurno extends CustomCard {
+public class CuloGordo extends CustomCard {
 
-    public static final String ID = CatCardsMod.makeID("DepredadorDiurno");
+    public static final String ID = CatCardsMod.makeID("CuloGordo");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
-    private static final String NAME = "Depredador Diurno";
-    private static final String DESCRIPTION = "Al inicio de tu turno, gana !M! Fuerza y !M! Destreza.";
-    private static final String UPGRADE_DESCRIPTION = "Al inicio de tu turno, gana !M! Fuerza y !M! Destreza.";
+    private static final String NAME = "Culo Gordo";
+    private static final String DESCRIPTION = "Gana !M! Metalizado.";
 
-    private static final String IMG_PATH = CatCardsMod.makeCardPath("depredador_diurno.png");
+    private static final String IMG_PATH = CatCardsMod.makeCardPath("culo_gordo.png");
 
-    private static final int COST = 3;
-    private static final int UPGRADE_COST = 2;
-    private static final int STAT_GAIN = 1;
+    private static final int COST = 2;
+    private static final int METALLICIZE = 5;
+    private static final int UPGRADE_METALLICIZE = 2; // +2 = 7 total
 
-    public DepredadorDiurno() {
+    public CuloGordo() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION,
                 CardType.POWER,
-                CardColor.GREEN,  // Silent
+                CardColor.RED,  // Ironclad
                 CardRarity.RARE,
                 CardTarget.SELF);
 
-        this.baseMagicNumber = STAT_GAIN;
+        this.baseMagicNumber = METALLICIZE;
         this.magicNumber = this.baseMagicNumber;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(
-                new ApplyPowerAction(p, p, new DepredadorDiurnoPower(p, this.magicNumber), this.magicNumber));
+                new ApplyPowerAction(p, p, new MetallicizePower(p, this.magicNumber), this.magicNumber));
     }
 
     @Override
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeBaseCost(UPGRADE_COST);
-            this.rawDescription = UPGRADE_DESCRIPTION;
+            this.upgradeMagicNumber(UPGRADE_METALLICIZE);
             this.initializeDescription();
         }
     }
 
     @Override
     public AbstractCard makeCopy() {
-        return new DepredadorDiurno();
+        return new CuloGordo();
     }
 }

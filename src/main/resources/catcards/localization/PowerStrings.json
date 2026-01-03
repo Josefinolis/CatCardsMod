@@ -1,0 +1,10 @@
+{
+    "CatCardsMod:DepredadorDiurnoPower": {
+        "NAME": "Depredador Diurno",
+        "DESCRIPTIONS": [
+            "Al inicio de tu turno, gana ",
+            " Fuerza y ",
+            " Destreza."
+        ]
+    }
+}

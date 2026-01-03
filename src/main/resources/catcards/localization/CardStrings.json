@@ -1,14 +1,14 @@
 {
-    "CatCardsMod:PesoMuerto": {
-        "NAME": "Peso Muerto",
-        "DESCRIPTION": "Gana !B! de Bloqueo. NL Aplica !M! Weak.",
-        "UPGRADE_DESCRIPTION": "Gana !B! de Bloqueo. NL Aplica !M! Weak.",
-        "EXTENDED_DESCRIPTION": ["Te aplasta con cari\u00f1o"]
+    "CatCardsMod:CuloGordo": {
+        "NAME": "Culo Gordo",
+        "DESCRIPTION": "Gana !M! Metalizado.",
+        "UPGRADE_DESCRIPTION": "Gana !M! Metalizado.",
+        "EXTENDED_DESCRIPTION": ["El tamaño importa..."]
     },
     "CatCardsMod:DepredadorDiurno": {
         "NAME": "Depredador Diurno",
-        "DESCRIPTION": "Inflige !D! de da\u00f1o. NL Si el enemigo tiene Vulnerable, inflige !D! de da\u00f1o adicional.",
-        "UPGRADE_DESCRIPTION": "Inflige !D! de da\u00f1o. NL Si el enemigo tiene Vulnerable, inflige !D! de da\u00f1o adicional.",
+        "DESCRIPTION": "Al inicio de tu turno, gana !M! Fuerza y !M! Destreza.",
+        "UPGRADE_DESCRIPTION": "Al inicio de tu turno, gana !M! Fuerza y !M! Destreza.",
         "EXTENDED_DESCRIPTION": ["Es que es muy bruto cuando juega..."]
     }
 }
