@@ -34,6 +34,9 @@ public class DepredadorDiurnoPower extends AbstractPower {
 
     @Override
     public void atStartOfTurn() {
+        if (this.owner == null || this.owner.isDeadOrEscaped()) {
+            return;
+        }
         flash();
         AbstractDungeon.actionManager.addToBottom(
                 new ApplyPowerAction(this.owner, this.owner,
