@@ -30,6 +30,7 @@ public class DepredadorDiurnoPower extends AbstractPower {
         this.amount = amount;
         this.updateDescription();
         this.type = PowerType.BUFF;
+        this.loadRegion("vigor");
     }
 
     @Override
